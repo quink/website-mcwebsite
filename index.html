@@ -1,25 +1,35 @@
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('button').addEventListener('click', function() {
-        window.open('https://www.google.com', '_blank');
-    });
-
-    // Show login popup after page load
-    document.getElementById('login-popup').style.display = 'block';
-});
-</script>
-
-hello2
-<button>Click me to open Google</button>
-
-<!-- Login Popup -->
-<div id="login-popup" style="display:none; position:fixed; bottom:20px; left:20px; background:#fff; border:1px solid #ccc; padding:20px; z-index:1000; box-shadow:0 2px 8px rgba(0,0,0,0.2);">
-  <p>
-    Please log in to continue.
-  </p>
-  <form onsubmit="alert('Logged in!'); document.getElementById('login-popup').style.display='none'; return false;" style="display:inline;">
-    <input type="text" placeholder="Username" required style="margin-right:10px;" />
-    <input type="password" placeholder="Password" required style="margin-right:10px;" />
-    <input type="submit" value="Login" style="background:#0070ba; color:#fff; border:none; padding:10px 20px; border-radius:4px; cursor:pointer;" />
-  </form>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Four Buttons Example</title>
+  <style>
+    .button-group {
+      display: flex;
+      gap: 16px;
+      margin: 40px;
+    }
+    .main-btn {
+      padding: 16px 32px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 6px;
+      background: #0070ba;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .main-btn:hover {
+      background: #005a94;
+    }
+  </style>
+</head>
+<body>
+  <div class="button-group">
+    <button class="main-btn" onclick="alert('Shop clicked!')">Shop</button>
+    <button class="main-btn" onclick="alert('Play clicked!')">Play</button>
+    <button class="main-btn" onclick="alert('Trade clicked!')">Trade</button>
+    <button class="main-btn" onclick="alert('Wheel clicked!')">Wheel</button>
+  </div>
+</body>
+</html>
